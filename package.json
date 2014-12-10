@@ -1,7 +1,7 @@
 {
-  "name": "node-weather",
-  "description": "天气预报接口调用封装",
-  "version": "0.0.1",
+  "name": "qiangua-weather",
+  "description": "中国天气网 天气预报接口调用封装",
+  "version": "0.0.2",
   "homepage": "https://github.com/yxdh4620/node-weather",
   "author": {
     "name": "yxdh4620",

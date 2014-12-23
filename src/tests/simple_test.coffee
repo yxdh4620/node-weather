@@ -101,7 +101,7 @@ describe "test simple", ->
     it "synthesize test", (done) ->
       @timeout = 60000
       sw = new SimpleWeather(httpUrl,appId,privateKey)
-      provinces = ['10101','10119']
+      provinces = ['10131']
       async.eachSeries provinces, (province, next) =>
         sw.loadCitys province, (err,body)->
           console.log err if err?

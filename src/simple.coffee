@@ -121,14 +121,22 @@ class SimpleWeather
         tests = JSON.parse(body) || {}
         areas = {}
         unless isFull
-          areas = tests
+          for key, val of tests
+            if key.length > 2
+              areas["#{key.substr(key.length-2)}"] = val
+            else
+              areas["#{key}"] = val
+            continue
         else
           for key, val of tests
             if city is '00'
               areas["#{province}#{key}#{city}"] = val
               continue
             else
-              areas["#{province}#{city}#{key}"]=val
+              if key.length > 2
+                areas["#{key}"] = val
+              else
+                areas["#{province}#{city}#{key}"]=val
               continue
         callback null, areas
       catch err
